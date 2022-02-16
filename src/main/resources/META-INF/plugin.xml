@@ -1,8 +1,8 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.mbinic.intellijtgit</id>
-    <name>intellij-tgit</name>
-    <vendor>mbinic</vendor>
+    <name>TortoiseGit Actions</name>
+    <vendor>Marko Binic</vendor>
 
     <depends>com.intellij.modules.platform</depends>
 
@@ -15,4 +15,165 @@
         <listener class="com.github.mbinic.intellijtgit.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <group id="TGit" text="TortoiseGit" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
+
+        <group id="TGit.first">
+            <add-to-group group-id="TGit" anchor="first"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.Pull" class="com.github.mbinic.intellijtgit.actions.PullAction" text="&amp;Pull">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control P" keymap="$default"/>
+            <add-to-group group-id="TGit.first" anchor="last"/>
+        </action>
+        <action id="TGit.Fetch" class="com.github.mbinic.intellijtgit.actions.FetchAction" text="&amp;Fetch">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control F" keymap="$default"/>
+            <add-to-group group-id="TGit.first" anchor="last"/>
+        </action>
+        <action id="TGit.Push" class="com.github.mbinic.intellijtgit.actions.PushAction" text="P&amp;ush">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control U" keymap="$default"/>
+            <add-to-group group-id="TGit.first" anchor="last"/>
+        </action>
+
+        <action id="TGit.Sync" class="com.github.mbinic.intellijtgit.actions.SyncAction" text="S&amp;ync" popup="true">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control Y" keymap="$default"/>
+            <add-to-group group-id="TGit.first" anchor="last"/>
+        </action>
+
+        <action id="TGit.commit" class="com.github.mbinic.intellijtgit.actions.CommitAction" text="&amp;Commit" popup="true">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control C" keymap="$default"/>
+            <add-to-group group-id="TGit.first" anchor="last"/>
+        </action>
+
+        <group id="TGit.second">
+            <add-to-group group-id="TGit" anchor="last"/>
+            <separator/>
+        </group>
+        
+        <action id="TGit.Diff" class="com.github.mbinic.intellijtgit.actions.DiffAction" text="File Diff">
+            <keyboard-shortcut first-keystroke="control shift alt G" second-keystroke="control shift alt D" keymap="$default"/>
+            <add-to-group group-id="TGit.second" anchor="last"/>
+        </action>
+
+        <action id="TGit.DiffRepo" class="com.github.mbinic.intellijtgit.actions.DiffRepoAction" text="Repository &amp;Diff">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control D" keymap="$default"/>
+            <add-to-group group-id="TGit.second" anchor="last"/>
+        </action>
+
+        <action id="TGit.Blame" class="com.github.mbinic.intellijtgit.actions.BlameAction" text="&amp;Blame">
+            <keyboard-shortcut first-keystroke="control shift alt G" second-keystroke="control shift alt B" keymap="$default"/>
+            <add-to-group group-id="TGit.second" anchor="last"/>
+        </action>
+
+        <group id="TGit.third">
+            <add-to-group group-id="TGit" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.ShowLog" class="com.github.mbinic.intellijtgit.actions.ShowLogAction" text="Show &amp;Log">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control L" keymap="$default"/>
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </action>
+
+        <action id="TGit.ShowFileLog" class="com.github.mbinic.intellijtgit.actions.ShowFileLogAction" text="Show File Log">
+            <keyboard-shortcut first-keystroke="control shift alt G" second-keystroke="control shift alt L" keymap="$default"/>
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </action>
+
+        <action id="TGit.Rebase" class="com.github.mbinic.intellijtgit.actions.RebaseAction" text="&amp;Rebase">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control R" keymap="$default"/>
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </action>
+
+        <action id="TGit.StashSave" class="com.github.mbinic.intellijtgit.actions.StashSaveAction" text="Stash S&amp;ave">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control A" keymap="$default"/>
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </action>
+
+        <action id="TGit.StashPop" class="com.github.mbinic.intellijtgit.actions.StashPopAction" text="Stash P&amp;op">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control O" keymap="$default"/>
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </action>
+
+        <action id="TGit.StashList" class="com.github.mbinic.intellijtgit.actions.StashListAction" text="Stash L&amp;ist">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control I" keymap="$default"/>
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </action>
+
+        <group id="TGit.Bisect" text="Bisect" popup="true">
+            <add-to-group group-id="TGit.third" anchor="last"/>
+        </group>
+
+        <group id="TGit.Bisect.first">
+            <add-to-group group-id="TGit.Bisect" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.bisectStart" class="com.github.mbinic.intellijtgit.actions.BisectStartAction" text="Bisect Start">
+            <add-to-group group-id="TGit.Bisect.first" anchor="last"/>
+        </action>
+
+        <group id="TGit.Bisect.second">
+            <add-to-group group-id="TGit.Bisect" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.bisectGood" class="com.github.mbinic.intellijtgit.actions.BisectGoodAction" text="Bisect Good">
+            <add-to-group group-id="TGit.Bisect.second" anchor="last"/>
+        </action>
+
+        <action id="TGit.bisectBad" class="com.github.mbinic.intellijtgit.actions.BisectBadAction" text="Bisect Bad">
+            <add-to-group group-id="TGit.Bisect.second" anchor="last"/>
+        </action>
+
+        <action id="TGit.bisectSkip" class="com.github.mbinic.intellijtgit.actions.BisectSkipAction" text="Bisect Skip">
+            <add-to-group group-id="TGit.Bisect.second" anchor="last"/>
+        </action>
+
+        <group id="TGit.Bisect.third">
+            <add-to-group group-id="TGit.Bisect" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.bisectReset" class="com.github.mbinic.intellijtgit.actions.BisectResetAction" text="Bisect Reset">
+            <add-to-group group-id="TGit.Bisect.third" anchor="last"/>
+        </action>
+
+        <group id="TGit.fourth">
+            <add-to-group group-id="TGit" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.Resolve" class="com.github.mbinic.intellijtgit.actions.ResolveAction" text="R&amp;esolve">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control E" keymap="$default"/>
+            <add-to-group group-id="TGit.fourth" anchor="last"/>
+        </action>
+
+        <action id="TGit.Revert" class="com.github.mbinic.intellijtgit.actions.RevertAction" text="Re&amp;vert">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control V" keymap="$default"/>
+            <add-to-group group-id="TGit.fourth" anchor="last"/>
+        </action>
+
+        <action id="TGit.Cleanup" class="com.github.mbinic.intellijtgit.actions.CleanupAction" text="Cleanup">
+            <add-to-group group-id="TGit.fourth" anchor="last"/>
+        </action>
+
+        <group id="TGit.fifth">
+            <add-to-group group-id="TGit" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.Switch" class="com.github.mbinic.intellijtgit.actions.SwitchAction" text="&amp;Switch">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control S" keymap="$default"/>
+            <add-to-group group-id="TGit.fifth" anchor="last"/>
+        </action>
+
+        <action id="TGit.Merge" class="com.github.mbinic.intellijtgit.actions.MergeAction" text="&amp;Merge">
+            <keyboard-shortcut first-keystroke="control G" second-keystroke="control M" keymap="$default"/>
+            <add-to-group group-id="TGit.fifth" anchor="last"/>
+        </action>
+    </actions>
 </idea-plugin>
