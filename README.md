@@ -1,41 +1,64 @@
-# intellij-tgit
+# TortoiseGit actions for IntelliJ-based IDEs
 
 ![Build](https://github.com/mbinic/intellij-tgit/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get familiar with the [template documentation][template].
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Introduction
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+**Launch common TortoiseGit dialogs using intuitive shortcuts from within IntelliJ-based IDEs**
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+### Repo-scoped shortcuts:
+* **G**it **C**ommit - `Ctrl+G, Ctrl+C`</li>
+* **G**it **F**etch - `Ctrl+G, Ctrl+F`</li>
+* **G**it **L**og - `Ctrl+G, Ctrl+L`</li>
+* **G**it **M**erge - `Ctrl+G, Ctrl+M`</li>
+* **G**it **P**ull - `Ctrl+G, Ctrl+P`</li>
+* **G**it P**u**sh - `Ctrl+G, Ctrl+U`</li>
+* **G**it **R**ebase - `Ctrl+G, Ctrl+R`</li>
+* **G**it Re**v**ert - `Ctrl+G, Ctrl+V`</li>
+* **G**it Stash-L**i**st - `Ctrl+G, Ctrl+I`</li>
+* **G**it Stash-P**o**p - `Ctrl+G, Ctrl+O`</li>
+* **G**it Stash-S**a**ve - `Ctrl+G, Ctrl+A`</li>
+* **G**it **S**witch - `Ctrl+G, Ctrl+S`</li>
+* **G**it S**y**nc - `Ctrl+S, Ctrl+Y`</li>
+* **G**it Clea**n**up - `Ctrl+G, Ctrl+N`</li>
+* **G**it Repository **D**iff - `Ctrl+G, Ctrl+D`</li>
+
+### Current file-scoped shortcuts:
+* **G**it R**e**solve - `Ctrl+G, Ctrl+E`</li>
+* **G**it File **L**og - `Ctrl+Shift+Alt+G, Ctrl+Shift+Alt+L`</li>
+* **G**it File **B**lame - `Ctrl+Shift+Alt+G, Ctrl+Shift+Alt+B`</li>
+* **G**it File **D**iff - `Ctrl+Shift+Alt+G, Ctrl+Shift+Alt+D`</li>
+
+### Shortcut Conflicts
+Since the default shortcuts will make `Ctrl+G` (Go To Line) inaccessible, you can change them, or just change the one for "Go To Line" to be e.g. `Ctrl+G, Ctrl+G`.
+
+### More Actions
+Bisect commands are also available, but with no preset shortcuts. You can reach them from the Tools > TortoiseGit Actions menu, or search for `TGit` in the `Shift Shift` palette.
+
+### Optional Configuration
+If you've installed TortoiseGit in a custom location, you can specify the path to `TortoiseGitProc.exe` under `File` > `Settings` > `Tools` > `TortoiseGit Actions`.
+
+
 <!-- Plugin description end -->
 
 ## Installation
 
 - Using IDE built-in plugin system:
   
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "intellij-tgit"</kbd> >
-  <kbd>Install Plugin</kbd>
+  `Settings/Preferences` > `Plugins` > `Marketplace` > `Search for "intellij-tgit"` >
+  `Install Plugin`
   
 - Manually:
 
   Download the [latest release](https://github.com/mbinic/intellij-tgit/releases/latest) and install it manually using
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
+  `Settings/Preferences` > `Plugins` > `⚙️` > `Install plugin from disk...`
 
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
 
-[template]: https://github.com/JetBrains/intellij-platform-plugin-template
+Plugin based on the [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template).
+
+**Here's to productivity!**
