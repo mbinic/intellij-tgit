@@ -1,5 +1,6 @@
 package com.github.mbinic.intellijtgit.Helpers
 
+import com.github.mbinic.intellijtgit.settings.AppSettingsState
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.fileEditor.FileDocumentManager
@@ -11,13 +12,19 @@ import java.nio.file.Paths
 
 class Context {
     companion object Helper {
+        const val defaultTortoiseGitProcPath = "C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe"
+
         fun getCurrentLine(e: AnActionEvent): Int? {
             var editor = e.dataContext.getData(CommonDataKeys.EDITOR)
             return editor?.caretModel?.currentCaret?.logicalPosition?.line
         }
 
         fun getTortoiseGitPath(): String? {
-            return "C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitProc.exe"
+            var path = AppSettingsState.instance.tortoiseGitProcPath
+            if (path == null || path.isBlank()) {
+                path = defaultTortoiseGitProcPath
+            }
+            return path
         }
 
         fun getWorkingPath(e: AnActionEvent, preferFilePath: Boolean, filePathRequired: Boolean): String? {

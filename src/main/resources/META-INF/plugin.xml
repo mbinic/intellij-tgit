@@ -7,14 +7,11 @@
     <depends>com.intellij.modules.platform</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.mbinic.intellijtgit.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.mbinic.intellijtgit.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.mbinic.intellijtgit.settings.AppSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="com.github.mbinic.intellijtgit.settings.AppSettingsConfigurable"
+                                 id="org.intellij.sdk.settings.AppSettingsConfigurable"
+                                 displayName="TortoiseGit Actions"/>
     </extensions>
-
-    <applicationListeners>
-        <listener class="com.github.mbinic.intellijtgit.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
     <actions>
         <group id="TGit" text="TortoiseGit" popup="true">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
