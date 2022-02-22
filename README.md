@@ -1,8 +1,8 @@
 # TortoiseGit actions for IntelliJ-based IDEs
 
 ![Build](https://github.com/mbinic/intellij-tgit/workflows/Build/badge.svg)
-[![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
-[![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
+[![Version](https://img.shields.io/jetbrains/plugin/v/18671.svg)](https://plugins.jetbrains.com/plugin/18671)
+[![Downloads](https://img.shields.io/jetbrains/plugin/d/18671.svg)](https://plugins.jetbrains.com/plugin/18671)
 
 ## Introduction
 
