@@ -38,12 +38,13 @@ class Context {
             }
 
             return path
-                ?: getRootGitFolder(getProjectFolder(e))
+                ?: getRootGitFolder(getProjectFolder(e, true))
                 ?: getRootGitFolder(getWorkingFileFolder(e))
+                ?: getRootGitFolder(getProjectFolder(e, false))
         }
 
-        private fun getProjectFolder(e: AnActionEvent): String? {
-            if (e.project?.projectFile == null) {
+        private fun getProjectFolder(e: AnActionEvent, requireProjectFile: Boolean): String? {
+            if (requireProjectFile && e.project?.projectFile == null) {
                 return null
             }
             return e.project?.basePath
