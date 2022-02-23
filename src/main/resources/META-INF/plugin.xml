@@ -172,5 +172,18 @@
             <keyboard-shortcut first-keystroke="control G" second-keystroke="control M" keymap="$default"/>
             <add-to-group group-id="TGit.fifth" anchor="last"/>
         </action>
+
+        <group id="TGit.sixth">
+            <add-to-group group-id="TGit" anchor="last"/>
+            <separator/>
+        </group>
+
+        <action id="TGit.Settings" class="com.github.mbinic.intellijtgit.actions.SettingsAction" text="Settings">
+            <add-to-group group-id="TGit.sixth" anchor="last"/>
+        </action>
+
+        <action id="TGit.About" class="com.github.mbinic.intellijtgit.actions.AboutAction" text="About">
+            <add-to-group group-id="TGit.sixth" anchor="last"/>
+        </action>
     </actions>
 </idea-plugin>
