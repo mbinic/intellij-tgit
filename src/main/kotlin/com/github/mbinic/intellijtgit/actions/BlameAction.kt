@@ -7,7 +7,7 @@ import com.intellij.openapi.project.DumbAwareAction
 
 class BlameAction : DumbAwareAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        var line = Context.getCurrentLine(e) ?: 1
+        var line = (Context.getCurrentLine(e) ?: 0) + 1
         TGit.command(e, "blame", true, filePathRequired = true, additionalParams = "/line:${line}")
     }
 }
