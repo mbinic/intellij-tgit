@@ -10,4 +10,14 @@
 
 ### Added
 
-- Initial set of commands
+- Initial set of actions
+
+## [1.0.1] - 2022-23-02
+
+### Added
+
+- Settings and About actions
+
+### Fixed
+
+- Stash Save/Pop and Blame actions
