@@ -8,7 +8,7 @@
 
 <!-- Plugin description -->
 
-**Launch common TortoiseGit dialogs using intuitive shortcuts from within IntelliJ-based IDEs**
+**Launch common TortoiseGit dialogs using intuitive shortcuts**
 
 ### Repo-scoped shortcuts:
 * **G**it **C**ommit - `Ctrl+G, Ctrl+C`</li>
@@ -37,10 +37,10 @@
 Since the default shortcuts will make `Ctrl+G` (Go To Line) inaccessible, you can change them, or just change the one for "Go To Line" to be e.g. `Ctrl+G, Ctrl+G`.
 
 ### More Actions
-Bisect commands are also available, but with no preset shortcuts. You can reach them from the Tools > TortoiseGit Actions menu, or search for `TGit` in the `Shift Shift` palette.
+Bisect commands are also available, but with no preset shortcuts. You can reach them from the TortoiseGit menu, or search for `TGit` in the `Shift Shift` palette.
 
 ### Optional Configuration
-If you've installed TortoiseGit in a custom location, you can specify the path to `TortoiseGitProc.exe` under `File` > `Settings` > `Tools` > `TortoiseGit Actions`.
+If you've installed TortoiseGit in a custom location, you can specify the path to `TortoiseGitProc.exe` under `Settings/Preferences` > `Tools` > `TortoiseGit Actions`.
 
 
 <!-- Plugin description end -->
