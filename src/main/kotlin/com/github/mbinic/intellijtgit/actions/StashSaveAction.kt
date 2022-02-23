@@ -6,6 +6,6 @@ import com.intellij.openapi.project.DumbAwareAction
 
 class StashSaveAction : DumbAwareAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        TGit.command(e, "stashSave")
+        TGit.command(e, "stashsave")
     }
 }
