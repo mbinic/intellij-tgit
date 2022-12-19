@@ -8,6 +8,7 @@
 Specify max supported IDE version limit as 222.*
 
 ## [1.0.3]
+Remove max supported IDE version limit
 
 ## [1.0.1]
 ### Added
