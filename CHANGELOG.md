@@ -4,10 +4,6 @@
 
 ## [Unreleased]
 
-## [1.0.8] - 2024-04-23
-
-Support 2024.1 IDE versions
-
 ## [1.0.7] - 2023-10-25
 
 Support 2023.2 IDE versions
