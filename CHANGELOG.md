@@ -4,6 +4,9 @@
 
 ## [Unreleased]
 
+## [1.0.8] - 2024-04-23
+
+[Unreleased]: https://github.com/mbinic/intellij-tgit/compare/v1.0.7...HEAD
 ## [1.0.7] - 2023-10-25
 
 Support 2023.2 IDE versions
@@ -41,7 +44,8 @@ Remove max supported IDE version limit
 - Initial set of actions
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
 
-[Unreleased]: https://github.com/mbinic/intellij-tgit/compare/v1.0.7...HEAD
+[Unreleased]: https://github.com/mbinic/intellij-tgit/compare/v1.0.8...HEAD
+[1.0.8]: https://github.com/mbinic/intellij-tgit/compare/v1.0.7...v1.0.8
 [1.0.7]: https://github.com/mbinic/intellij-tgit/compare/v1.0.6...v1.0.7
 [1.0.6]: https://github.com/mbinic/intellij-tgit/compare/v1.0.5...v1.0.6
 [1.0.5]: https://github.com/mbinic/intellij-tgit/compare/v1.0.4...v1.0.5
