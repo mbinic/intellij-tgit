@@ -4,6 +4,10 @@
 
 ## [Unreleased]
 
+## [1.0.12] - 2025-04-22
+
+Support 2024.3 IDE versions
+
 ## [1.0.11] - 2024-11-16
 
 Support 2024.3 IDE versions
@@ -53,7 +57,8 @@ Remove max supported IDE version limit
 - Initial set of actions
 - Initial scaffold created from [IntelliJ Platform Plugin Template](https://github.com/JetBrains/intellij-platform-plugin-template)
 
-[Unreleased]: https://github.com/mbinic/intellij-tgit/compare/v1.0.11...HEAD
+[Unreleased]: https://github.com/mbinic/intellij-tgit/compare/v1.0.12...HEAD
+[1.0.12]: https://github.com/mbinic/intellij-tgit/compare/v1.0.11...v1.0.12
 [1.0.11]: https://github.com/mbinic/intellij-tgit/compare/v1.0.10...v1.0.11
 [1.0.10]: https://github.com/mbinic/intellij-tgit/compare/v1.0.9...v1.0.10
 [1.0.9]: https://github.com/mbinic/intellij-tgit/compare/v1.0.8...v1.0.9
