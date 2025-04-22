@@ -6,7 +6,7 @@
 
 ## [1.0.12] - 2025-04-22
 
-Support 2024.3 IDE versions
+Support 2025.1 IDE versions
 
 ## [1.0.11] - 2024-11-16
 
