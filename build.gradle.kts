@@ -106,6 +106,11 @@ intellijPlatform {
         ides {
             recommended()
         }
+
+        freeArgs = listOf(
+            "-mute",
+            "TemplateWordInPluginName"
+        )
     }
 }
 
